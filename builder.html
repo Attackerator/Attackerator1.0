@@ -2,12 +2,82 @@
 <html>
 
 <head>
-  <title>About Me</title>
+  <title>Attackerator</title>
   <link rel="stylesheet" href="style.css" type="text/css"/>
 </head>
 <body>
-  <h1><strong> Jason Logan</strong></h1>
   <nav>
+    <ul>
+      <li class='currentPage'><a href='builder.html'>Build</a></li>
+      <li><a href='index.html'>Attack</a></li>
+    </ul>
   </nav>
+  <form>
+    <fieldset>
+      <legend>Weapon</legend>
+      Name: <input type="text"><br>
+      Dice Style: <select name='diceType'>
+        <option value='d4'>d4</option>
+        <option value='d6'>d6</option>
+        <option value='d8'>d8</option>
+        <option value='d10'>d10</option>
+        <option value='d12'>d12</option>
+        <option value='d20'>d20</option>
+      </select>
+      How many dice?: <select name='diceNumber'>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      Base Stat: <select name='baseStat'>
+        <option value="str">Strength</option>
+        <option value="dex">Dexterity</option>
+        <option value="con">Constitution</option>
+        <option value='int'>Intelligence</option>
+        <option value="wis">Wisdom</option>
+        <option value="char">Charisma</option>
+      </select>
+    </fieldset>
+    <fieldset>
+      <legend>Spell</legend>
+      Name: <input type="text"><br>
+      Dice Style: <select name='diceType'>
+        <option value='d4'>d4</option>
+        <option value='d6'>d6</option>
+        <option value='d8'>d8</option>
+        <option value='d10'>d10</option>
+        <option value='d12'>d12</option>
+        <option value='d20'>d20</option>
+      </select>
+      How many dice?: <select name='diceNumber'>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      Base Stat: <select name='baseStat'>
+        <option value="str">Strength</option>
+        <option value="dex">Dexterity</option>
+        <option value="con">Constitution</option>
+        <option value='int'>Intelligence</option>
+        <option value="wis">Wisdom</option>
+        <option value="char">Charisma</option>
+      </select>
+      Description:<
+    </fieldset>
+  </form>
 </body>
 </html>
