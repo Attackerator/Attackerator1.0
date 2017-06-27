@@ -40,29 +40,6 @@ nav a{
   text-decoration: none;
   color: black;
 }
-fieldset{
-  font-family: 'Trade Winds', cursive;
-  clear: both;
-  font-size: 30px;
-  background-color: rgba(205,170,125,0.5);
-}
-input{
-  font-size: 20px;
-}
-select{
-  font-size: 20px;
-}
-input[type='submit']{
-  float: right;
-  font-size: 20px;
-  padding: 20px;
-}
-#weaponTable{
-
-}
-#spellTable{
-  
-}
 footer{
   width: 100%;
   margin: auto;
