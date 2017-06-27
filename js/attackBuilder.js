@@ -2,7 +2,7 @@ WeaponAttack.prototype.render = function (){
   var newWeapon = document.createElement('td');
   var weaponName = document.createTextNode(this.name);
   newWeapon.appendChild(weaponName);
-  var newRow = document.getElementById('weaponName');
+  var newRow = document.createElement('tr');
   newRow.appendChild(newWeapon);
   var tableContainer = document.getElementById('weaponTable');
   tableContainer.appendChild(newRow);
