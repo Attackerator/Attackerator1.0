@@ -2,7 +2,8 @@
 console.log('character.js loaded');
 
 //character constuctor
-function Character() {
+function Character(characterName) {
+  this.name = characterName;
   this.strength = this.generateStat();
   this.dexterity = this.generateStat();
   this.constitution = this.generateStat();
