@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Nerdbetter</title>
-  <link href="css/styles.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet"/>
 </head>
 <body>
   <div class="wrapper">
@@ -15,21 +15,29 @@
     </nav>
   </header>
     <div class="character-info">
-      <input type="text" name="name"/>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+      <input type="text" name="name" placeholder="Enter Name"/><br />
+      <fieldset>
+        <label for"strength">STR</label>
+        <div class="strength"></div>
+        <label for="dexterity">DEX</label>
+        <div class="dexterity"></div>
+        <label for="constitution">CON</label>
+        <div class="constitution"></div>
+        <label for="intelligence">INT</label>
+        <div class="intelligence"></div>
+        <label for="wisdom">WIS</label>
+        <div class="wisdom"></div>
+        <label for="charisma">CHAR</label>
+        <div class="charisma"></div>
       </ul>
+      <input type="submit" name="create" value="create" onclick="Character"/>
+    </fieldset>
     </div>
     <form>
     </form>
   <footer>
   </footer>
-  <script src="js/model.js"></script>
+  <script src="js/character.js"></script>
 </div>
 </body>
 </html>
