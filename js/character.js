@@ -32,5 +32,4 @@ Character.prototype.generateStat = function() {
     stat += index;
   }
   //return the final stat value
-  return stat;
-  }
+  return stat;\
