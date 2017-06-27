@@ -40,9 +40,8 @@ form.addEventListener('submit', updateStats);
 function updateStats(event){
   event.preventDefault();
   var name = document.querySelector('input[name = "name"]');
-  //get element by Id and append child
   var character = new Character(name.value);
 
   characters.push(character);
+  console.log(characters);
 };
-console.log(characters);
