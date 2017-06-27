@@ -19,7 +19,7 @@
     <form>
       <fieldset>
         <legend>Weapon</legend>
-        Name: <input type="text"><br>
+        Name: <input class='name' name='name' type="text"><br>
         <label>Dice Style: <select name='diceType'>
           <option value='d4'>d4</option>
           <option value='d6'>d6</option>
@@ -48,11 +48,14 @@
           <option value="wis">Wisdom</option>
           <option value="char">Charisma</option>
         </select>
+        Description: <input name='description' class='description' type='text' /></br>
         <input type='submit' value='Create Weapon'/>
       </fieldset>
+    </form>
+    <form>
       <fieldset>
         <legend>Spell</legend>
-        Name: <input type="text"></br>
+        Name: <input name='name' class='name' type="text"></br>
         Dice Style: <select name='diceType'>
           <option value='d4'>d4</option>
           <option value='d6'>d6</option>
@@ -93,7 +96,7 @@
           <option value="char">Charisma</option>
         </select><br/>
         Description: <input type='text' /></br>
-        <input type='submit' value='Create Spell'/>
+        <input type='submit' name='description' class='description' value='Create Spell'/>
       </fieldset>
     </form>
     <table id='spellTable'>
@@ -108,5 +111,7 @@
   <footer>
     <h3>@Attackerator</h3>
   </footer>
+  <script src="js/character.js"></script>
+  <script src="js/attackBuilder.js"></script>
 </body>
 </html>
