@@ -2,7 +2,8 @@
 console.log('character.js loaded');
 
 //character constuctor
-function Character() {
+function Character(characterName) {
+  this.name = characterName;
   this.strength = this.generateStat();
   this.dexterity = this.generateStat();
   this.constitution = this.generateStat();
@@ -19,7 +20,6 @@ Character.prototype.generateStat = function() {
     var randomNumber = Math.floor(Math.random() * 7);
     rolls.push(randomNumber);
   }
-
   console.log(rolls);
   //sorts array lowest to highest
   rolls.sort();
@@ -32,13 +32,4 @@ Character.prototype.generateStat = function() {
     stat += index;
   }
   //return the final stat value
-  return stat;
-}
-
-var moe = new Character();
-
-var listOfCharacters = [
-  new Character(),
-];
-console.log(listOfCharacters);
-console.log(moe);
+  return stat;\
