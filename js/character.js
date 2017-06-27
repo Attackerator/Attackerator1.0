@@ -1,9 +1,9 @@
 'use strict';
 console.log('character.js loaded');
-
+var characters = [];
 //character constuctor
-function Character(characterName) {
-  this.name = characterName;
+function Character(name) {
+  this.name = name;
   this.strength = this.generateStat();
   this.dexterity = this.generateStat();
   this.constitution = this.generateStat();
@@ -32,4 +32,17 @@ Character.prototype.generateStat = function() {
     stat += index;
   }
   //return the final stat value
-  return stat;\
+  return stat;
+};
+//grab the whole form and append variables int empty divs
+var form = document.querySelector('form');
+form.addEventListener('submit', updateStats);
+function updateStats(event){
+  event.preventDefault();
+  var name = document.querySelector('input[name = "name"]');
+  //get element by Id and append child
+  var character = new Character(name.value);
+
+  characters.push(character);
+};
+console.log(characters);
