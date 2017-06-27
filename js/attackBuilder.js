@@ -1,51 +1,50 @@
-function WeaponAttacks(){
-  var name = document.getElementsByClassName('name')[0].value;
-  var diceStyle = document.getElementsByName('diceType')[0].value;
-  var diceCount = document.getElementsByName('diceNumber')[0].value;
-  var baseStat = document.getElementsByName('baseStat')[0].value;
-  var description = getElementsByClassName('description')[0].value;
+//weapon attack!
+var weaponAttacks = [];
+function WeaponAttacks(name, diceType, diceNumber, baseStat, description){
+  this.name = name;
+  this.diceType = diceType;
+  this.diceNumber = diceNumber;
+  this.baseStat = baseStat;
+  this.description = description;
+  weaponAttacks.push(this);
 }
-//Character.WeaponAttacks.push(new WeaponAttacks(name, diceStyle, diceCount, baseStat, description));
-
-function SpellAttacks(){
-  var name = document.getElementsByClassName('name')[1].value;
-  var diceStyle = document.getElementsByName('diceType')[1].value;
-  var diceCount = document.getElementsByName('diceNumber')[1].value;
-  var baseStat = document.getElementsByName('baseStat')[1].value;
-  var spellLevel = document.getElementsByName('spellLevel')[1].value;
-  var description = getElementsByClassName('description')[1].value;
-}
-//character.SpellAttacks.push(new SpellAttacks(name, diceStyle, diceCount, baseStat, spellLevel, description));
-
-//submit for spellAttacks
-var form = document.querySelector('form')[1];
-form.addEventListener('submit', formSubmit);
-function formSubmit(event){
-  event.preventDefault();
-  var name = document.querySelector('input[name="name"]');
-  var diceStyle = document.querySelector('input[name="diceStyle"]');
-  var diceCount = document.querySelector('input[name="diceCount"]');
-  var baseStat = document.querySelector('input[name="baseStat"]');
-  var spellLevel = document.querySelector('input[name="spellLevel"]');
-  var description = document.querySelector('input[name="description"]');
-
-  var spellAttacks = new SpellAttacks( name.value, diceStyle.value, diceCount.value, baseStat.value, spellLevel.value, description.value);
-
-  Character.SpellAttacks.push(new SpellAttacks(name, diceStyle, diceCount, baseStat, spellLevel, description));
-};
 //submit for weaponAttacks
-var form = document.querySelector('form')[0];
+var form = document.querySelectorAll('form')[0];
 form.addEventListener('submit', formSubmit);
 function formSubmit(event){
   event.preventDefault();
-  var name = document.querySelector('input[name="name"]');
-  var diceStyle = document.querySelector('input[name="diceStyle"]');
-  var diceCount = document.querySelector('input[name="diceCount"]');
-  var baseStat = document.querySelector('input[name="baseStat"]');
-  var spellLevel =  document.querySelector('input[name="description"]');
+  var name = document.querySelectorAll('input[name="name"]')[0];
+  var diceType = document.querySelectorAll('select[name="diceType"]')[0];
+  var diceNumber = document.querySelectorAll('select[name="diceNumber"]')[0];
+  var baseStat = document.querySelectorAll('select[name="baseStat"]')[0];
+  var description =  document.querySelectorAll('input[name="description"]')[0];
 
-  var wpellAttacks = new WeaponAttacks( name.value, diceStyle.value, diceCount.value, baseStat.value, description.value);
+  var weaponAttacks = new WeaponAttacks( name.value, diceType.value, diceNumber.value, baseStat.value, description.value);
+  console.log(weaponAttacks);
+};
+//spell Attacks!
+var spellAttacks = [];
+function SpellAttacks(name, diceType, diceNumber, baseStat, spellLevel, description){
+  this.name = name;
+  this.diceType = diceType;
+  this.diceNumber = diceNumber;
+  this.baseStat = baseStat;
+  this.spellLevel = spellLevel;
+  this.description = description;
+  spellAttacks.push(this);
+}
+//submit for spellAttacks
+var form = document.querySelectorAll('form')[1];
+form.addEventListener('submit', formSubmit);
+function formSubmit(event){
+  event.preventDefault();
+  var name = document.querySelectorAll('input[name="name"]')[1];
+  var diceType = document.querySelectorAll('select[name="diceType"]')[1];
+  var diceNumber = document.querySelectorAll('select[name="diceNumber"]')[1];
+  var baseStat = document.querySelectorAll('select[name="baseStat"]')[1];
+  var baseStat = document.querySelectorAll('select[name="spellLevel"]')[1];
+  var description =  document.querySelectorAll('input[name="description"]')[1];
 
-  Character.WeaponAttacks.push(new WeaponAttacks
-    (name, diceStyle, diceCount, baseStat, spellLevel, description));
+  var spellAttacks = new SpellAttacks( name.value, diceType.value, diceNumber.value, baseStat.value, spellLevel.value, description.value);
+  console.log(spellAttacks);
 };
