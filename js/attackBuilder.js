@@ -1,6 +1,5 @@
 //weapon attack!
 var weaponAttacks = [];
-
 function WeaponAttack(name, diceType, diceNumber, baseStat, description){
   this.name = name;
   this.diceType = diceType;
@@ -22,8 +21,8 @@ function submitAttack(event){
   var weaponAttack = new WeaponAttack( name.value, diceType.value, diceNumber.value, baseStat.value, description.value);
 
   weaponAttacks.push(weaponAttack);
-
   console.log(weaponAttacks);
+  localStorage.setItem('weaponAttacks', JSON.stringify(weaponAttacks));;
 };
 //spell Attacks!
 var spellAttacks = [];
@@ -50,6 +49,6 @@ function submitSpell(event){
   var spellAttack = new SpellAttack( name.value, diceType.value, diceNumber.value, baseStat.value, spellLevel.value, description.value);
 
   spellAttacks.push(spellAttack);
-
   console.log(spellAttacks);
+  localStorage.setItem('spellAttacks', JSON.stringify(spellAttacks));
 };

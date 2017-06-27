@@ -1,6 +1,5 @@
 'use strict';
 console.log('character.js loaded');
-
 //character constuctor
 function Character(characterName) {
   this.name = characterName;
