@@ -34,7 +34,7 @@ Character.prototype.generateStat = function() {
   //return the final stat value
   return stat;
 };
-//grab the whole form and append variables int empty divs
+//grab name in form and update charachter name
 var form = document.querySelector('form');
 form.addEventListener('submit', updateStats);
 function updateStats(event){
@@ -44,4 +44,12 @@ function updateStats(event){
 
   characters.push(character);
   console.log(characters);
+  var charName = document.getElementById('displayName');
+  var text = charName.textContent;
+  charName.textContent = name.value;
 };
+//grab dispaly name and appendChild with name
+/*function updateName(){
+  var charName = document.getElementById('displayName');
+  charName.textContent = Character.name;
+}*/

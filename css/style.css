@@ -26,6 +26,9 @@
 .name{
   width: 170px;
   height: 30px;
+  text-align: center;
+  font-size: 2em;
+  margin: 0px auto 0px auto;
 }
 body{
   min-height: 1000px;
