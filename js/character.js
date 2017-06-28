@@ -47,5 +47,29 @@ function updateStats(event){
   var charName = document.getElementById('displayName');
   var text = charName.textContent;
   charName.textContent = name.value;
+
+  var charStrength = document.getElementById('str');
+  var strText = charStrength.textContent;
+  charStrength.textContent = character.strength;
+
+  var charDexterity = document.getElementById('dex');
+  var dexText = charDexterity.textContent;
+  charDexterity.textContent = character.dexterity;
+
+  var charConstitution = document.getElementById('con');
+  var conText = charConstitution.textContent;
+  charConstitution.textContent = character.constitution;
+
+  var charIntelligence = document.getElementById('int');
+  var intText = charIntelligence.textContent;
+  charIntelligence.textContent = character.intelligence;
+
+  var charWisdom = document.getElementById('wis');
+  var wisText = charWisdom.textContent;
+  charWisdom.textContent = character.wisdom;
+
+  var charCharisma = document.getElementById('char');
+  var charText = charCharisma.textContent;
+  charCharisma.textContent = character.charisma;
 };
 //grab dispaly name and appendChild with name

@@ -6,7 +6,7 @@
   font-family: 'Trade Winds', cursive;
   background-color: rgba(205,170,125,0.5);
 }
-.strength, .dexterity, .constitution, .intelligence, .wisdom, .charisma{
+.str, .dex, .con, .int, .wis, .char{
   border: 1px solid;
   border-radius: 5px;
   width: 20px;
