@@ -77,8 +77,10 @@ function diceRoll(diceNumber, diceType){
 
   return total;
 }
-
-function attackRoll () {
+var form = document.getElementById('attack');
+form.addEventListener('submit', attackRoll);
+function attackRoll (event) {
+  event.preventDefault();
   var selectedAttack = document.getElementById('attacks').value;
   selectedAttack = attacks[selectedAttack];
   console.log(selectedAttack);
@@ -93,10 +95,15 @@ function attackRoll () {
 
   roll += abilityScore(selectedAttack.baseStat);
   console.log('roll after abilityScore ' + roll);
+
+  document.getElementById('display').innerText = roll;
 }
 //initiative function
+var initiativeButton = document.getElementById('initiativeButton');
+initiativeButton.addEventListener('click', initiativeRoll);
 function initiativeRoll(){
   var roll = diceRoll(1, 20);
   roll += characters[0].wisdom;
   console.log(roll);
+  document.getElementById('display').innerText = roll;
 }
