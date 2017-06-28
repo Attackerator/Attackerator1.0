@@ -1,6 +1,5 @@
 'use strict';
 console.log('character.js loaded');
-var characters = [];
 //character constuctor
 function Character(name) {
   this.name = name;
@@ -44,9 +43,13 @@ function updateStats(event){
 
   characters.push(character);
   console.log(characters);
+  localStorage.setItem('characters', JSON.stringify(characters));
+  renderCharacter(character);
+};
+function renderCharacter(character){
   var charName = document.getElementById('displayName');
   var text = charName.textContent;
-  charName.textContent = name.value;
+  charName.textContent = character.name;
 
   var charStrength = document.getElementById('str');
   var strText = charStrength.textContent;
@@ -71,5 +74,5 @@ function updateStats(event){
   var charCharisma = document.getElementById('char');
   var charText = charCharisma.textContent;
   charCharisma.textContent = character.charisma;
-};
+}
 //grab dispaly name and appendChild with name

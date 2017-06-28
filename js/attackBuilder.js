@@ -40,7 +40,7 @@ function submitAttack(event){
 
   attacks.push(weaponAttack);
   console.log(attacks);
-  localStorage.setItem('attacks', JSON.stringify(attacks));;
+  localStorage.setItem('attacks', JSON.stringify(attacks));
 };
 //spell attacks!
 function SpellAttack(name, diceType, diceNumber, baseStat, spellLevel, description){
