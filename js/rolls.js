@@ -46,15 +46,19 @@ function abilityScore(baseStat) {
 
 function diceRoll(diceType, diceNumber){
   var rolls = [];
+  console.log(diceType);
+  console.log(diceNumber);
   for (var i = 0; i < diceNumber; i++){
     var randomNumber = Math.floor(Math.random() * (diceType + 1));
     rolls.push(randomNumber);
   }
+  console.log(rolls);
   var total = 0;
   for(var i = 0; i < rolls.length; i++){
     var index = rolls[i];
     total += index;
   }
+
   return total;
 }
 
@@ -67,8 +71,9 @@ function attackRoll () {
   var diceNumber = parseInt(selectedAttack[diceNumber]);
   console.log(typeof(diceType));
   console.log(typeof(diceNumber));
+  console.log(diceType);
+  console.log(diceNumber);
 
   var roll = diceRoll(diceType, diceNumber);
-  roll += abilityScore(selectedAttack[baseStat]);
   console.log(roll);
 }

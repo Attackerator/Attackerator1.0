@@ -1,10 +1,6 @@
-var weaponAttacks = JSON.parse(localStorage.getItem('weaponAttacks'));
 
-var spellAttacks = JSON.parse(localStorage.getItem('spellAttacks'));
-
-var attacks = weaponAttacks.concat(spellAttacks);
-
-console.log(weaponAttacks);
+function attackForm() {
+console.log(attacks);
 var select = document.getElementById('attacks');
 for(var i = 0; i < attacks.length; i++) {
   var attack = attacks[i];
@@ -13,3 +9,4 @@ for(var i = 0; i < attacks.length; i++) {
   el.value = i;
   select.appendChild(el);
 };
+}
