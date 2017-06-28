@@ -44,16 +44,7 @@ function abilityScore(baseStat) {
     }
 }
 
-function attackRoll () {
-  var selectedAttack = document.getElementById('attacks').value;
-  selectedAttack = attacks[selectedAttack];
-  console.log(selectedAttack);
-
-  var diceType = parseInt(selectedAttack[diceType]);
-  var diceNumber = parseInt(selectedAttack[diceNumber]);
-  console.log(typeof(diceType));
-  console.log(typeof(diceNumber));
-
+function diceRoll(diceType, diceNumber){
   var rolls = [];
   for (var i = 0; i < diceNumber; i++){
     var randomNumber = Math.floor(Math.random() * (diceType + 1));
@@ -64,4 +55,18 @@ function attackRoll () {
     var index = rolls[i];
     total += index;
   }
+  return total;
+}
+
+function attackRoll () {
+  var selectedAttack = document.getElementById('attacks').value;
+  selectedAttack = attacks[selectedAttack];
+  console.log(selectedAttack);
+
+  var diceType = parseInt(selectedAttack[diceType]);
+  var diceNumber = parseInt(selectedAttack[diceNumber]);
+  console.log(typeof(diceType));
+  console.log(typeof(diceNumber));
+
+  diceRoll(diceType, diceNumber);
 }
