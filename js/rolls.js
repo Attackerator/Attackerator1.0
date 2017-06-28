@@ -107,3 +107,13 @@ function initiativeRoll(){
   console.log(roll);
   document.getElementById('display').innerText = roll;
 }
+document.getElementById('saveForm');
+saveForm.addEventListener('submit', saveRoll);
+function saveRoll(event){
+  event.preventDefault();
+  var baseStat = document.getElementById('saveStat').value;
+  var roll = diceRoll(1, 20);
+  roll += abilityScore(baseStat);
+  console.log(roll);
+  document.getElementById('display').innerText = roll;
+}
