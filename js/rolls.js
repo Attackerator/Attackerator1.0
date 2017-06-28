@@ -68,5 +68,7 @@ function attackRoll () {
   console.log(typeof(diceType));
   console.log(typeof(diceNumber));
 
-  diceRoll(diceType, diceNumber);
+  var roll = diceRoll(diceType, diceNumber);
+  roll += abilityScore(selectedAttack[baseStat]);
+  console.log(roll);
 }
