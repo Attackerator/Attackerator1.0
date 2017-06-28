@@ -1,9 +1,9 @@
 'use strict';
 console.log('character.js loaded');
-
+var characters = [];
 //character constuctor
-function Character(characterName) {
-  this.name = characterName;
+function Character(name) {
+  this.name = name;
   this.strength = this.generateStat();
   this.dexterity = this.generateStat();
   this.constitution = this.generateStat();
@@ -34,3 +34,18 @@ Character.prototype.generateStat = function() {
   //return the final stat value
   return stat;
 };
+//grab name in form and update charachter name
+var form = document.querySelector('form');
+form.addEventListener('submit', updateStats);
+function updateStats(event){
+  event.preventDefault();
+  var name = document.querySelector('input[name = "name"]');
+  var character = new Character(name.value);
+
+  characters.push(character);
+  console.log(characters);
+  var charName = document.getElementById('displayName');
+  var text = charName.textContent;
+  charName.textContent = name.value;
+};
+//grab dispaly name and appendChild with name

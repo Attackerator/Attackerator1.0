@@ -3,39 +3,49 @@
 <head>
   <title>Nerdbetter</title>
   <link href="css/style.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Trade+Winds" rel="stylesheet">
 </head>
 <body>
   <div class="wrapper">
-  <header>
     <nav>
       <ul>
-        <li></li>
-        <li></li>
+        <li class='currentPage'><a href='index.html'>Attack</a></li>
+        <li><a href='builder.html'>Build</a></li>
       </ul>
     </nav>
-  </header>
     <div class="character-info">
-      <input type="text" name="name" placeholder="Enter Name"/><br />
-      <fieldset>
-        <label for"strength">STR</label>
-        <div class="strength"></div>
-        <label for="dexterity">DEX</label>
+      <div id="displayName" class="name"></div>
+      <ul>
+        <li>STR</li>
+        <div id="str" class="strength"></div>
+      </ul>
+      <ul>
+        <li>DEX</li>
         <div class="dexterity"></div>
-        <label for="constitution">CON</label>
+      </ul>
+      <ul>
+        <li>CON</li>
         <div class="constitution"></div>
-        <label for="intelligence">INT</label>
+      </ul>
+      <ul>
+        <li>INT</li>
         <div class="intelligence"></div>
-        <label for="wisdom">WIS</label>
+      </ul>
+      <ul>
+        <li>WIS</li>
         <div class="wisdom"></div>
-        <label for="charisma">CHAR</label>
+      </ul>
+      <ul>
+        <li>CHAR</li>
         <div class="charisma"></div>
       </ul>
-      <input type="submit" name="create" value="create" onclick="Character"/>
-    </fieldset>
+      <form>
+        <input type="text" name="name" placeholder="Enter Name"/>
+        <input id="sub-stat" class="create-stat" type="submit" name="create" value="create"/>
+      </form>
     </div>
-    <form>
-    </form>
   <footer>
+    <h3>@Attackerator</h3>
   </footer>
   <script src="js/character.js"></script>
 </div>
