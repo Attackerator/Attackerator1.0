@@ -1,21 +1,12 @@
-var weaponAttacks = JSON.parse(localStorage.getItem('weaponAttacks'));
 
-var spellAttacks = JSON.parse(localStorage.getItem('spellAttacks'));
-
-console.log(weaponAttacks);
+function attackForm() {
+console.log(attacks);
 var select = document.getElementById('attacks');
-for(var i = 0; i < weaponAttacks.length; i++) {
-  var weaponAttack = weaponAttacks[i];
+for(var i = 0; i < attacks.length; i++) {
+  var attack = attacks[i];
   var el = document.createElement('option');
-  el.textContent = weaponAttack.name;
-  el.value = 'diceNumber';
+  el.textContent = attack.name;
+  el.value = i;
   select.appendChild(el);
 };
-var select = document.getElementById('attacks');
-for(var i = 0; i < spellAttacks.length; i++) {
-  var spellAttack = spellAttacks[i];
-  var el = document.createElement('option');
-  el.textContent = spellAttack.name;
-  el.value = 'diceNumber';
-  select.appendChild(el);
-};
+}
