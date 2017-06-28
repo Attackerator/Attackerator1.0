@@ -62,7 +62,7 @@ function abilityScore(baseStat) {
   }
 }
 
-function diceRoll(diceType, diceNumber){
+function diceRoll(diceNumber, diceType){
   var rolls = [];
   for (var i = 0; i < diceNumber; i++){
     var randomNumber = Math.floor(Math.random() * (diceType) + 1);
@@ -93,4 +93,10 @@ function attackRoll () {
 
   roll += abilityScore(selectedAttack.baseStat);
   console.log('roll after abilityScore ' + roll);
+}
+//initiative function
+function initiativeRoll(){
+  var roll = diceRoll(1, 20);
+  roll += characters[0].wisdom;
+  console.log(roll);
 }
