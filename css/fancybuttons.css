@@ -1,0 +1,92 @@
+.wrapper {
+  margin: 0px auto;
+  border: 3px solid;
+}
+header {
+  border-bottom: 3px solid;
+  text-align: center;
+}
+input {
+  height: 40px;
+  width: 400px;
+  margin: 5px;
+  font-size: 30px;
+  text-align: center;
+}
+ul {
+  list-style: none;
+}
+ul li {
+  display: inline-block;
+  margin: 0px 10px;
+}
+header ul li p, header ul li h4 {
+  margin: 0px;
+}
+.mainContent {
+  margin: 20px auto;
+}
+.mainDisplay {
+  position: relative;
+  z-index: 1;
+  border: 3px solid;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  margin: 10px auto;
+  font-size: 100px;
+  line-height: 200px;
+  text-align: center;
+  background: white;
+}
+.selectAttack {
+  position: relative;
+  border: 3px solid;
+  width: 200px;
+  height: 100px;
+  top: 165px;
+  left: 475px;
+  background: white;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+.attack {
+  position: relative;
+  border: 3px solid;
+  width: 200px;
+  height: 100px;
+  top: -165px;
+  left: 835px;
+  background: white;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.initiative {
+  position: relative;
+  border: 3px solid;
+  width: 200px;
+  height: 100px;
+  top: -160px;
+  left: 800px;
+  background: white;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.save {
+  position: relative;
+  border: 3px solid;
+  width: 200px;
+  height: 100px;
+  top: -268px;
+  left: 500px;
+  background: white;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+footer {
+  border-top: 3px solid;
+  text-align: center;
+  padding: 10px;
+}
