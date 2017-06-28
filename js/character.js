@@ -49,7 +49,3 @@ function updateStats(event){
   charName.textContent = name.value;
 };
 //grab dispaly name and appendChild with name
-/*function updateName(){
-  var charName = document.getElementById('displayName');
-  charName.textContent = Character.name;
-}*/
