@@ -67,11 +67,12 @@ function attackRoll () {
 
   var diceType = parseInt(selectedAttack.diceType);
   var diceNumber = parseInt(selectedAttack.diceNumber);
-  console.log(typeof(diceType));
-  console.log(typeof(diceNumber));
-  console.log(diceType);
-  console.log(diceNumber);
+  console.log('type of dice ' + diceType);
+  console.log('number of dice ' + diceNumber);
 
   var roll = diceRoll(diceType, diceNumber);
-  console.log(roll);
+  console.log('total roll ' + roll);
+
+  roll += abilityScore(selectedAttack.baseStat);
+  console.log('roll after abilityScore ' + roll);
 }
