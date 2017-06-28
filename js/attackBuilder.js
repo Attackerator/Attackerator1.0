@@ -1,6 +1,23 @@
+WeaponAttack.prototype.render = function (){
+  var newWeapon = document.createElement('td');
+  var weaponName = document.createTextNode(this.name);
+  newWeapon.appendChild(weaponName);
+  var newRow = document.createElement('tr');
+  newRow.appendChild(newWeapon);
+  var tableContainer = document.getElementById('weaponTable');
+  tableContainer.appendChild(newRow);
+};
+SpellAttack.prototype.render = function (){
+  var newSpell = document.createElement('td');
+  var spellName = document.createTextNode(this.name);
+  newSpell.appendChild(spellName);
+  var newRow = document.createElement('tr');
+  newRow.appendChild(newSpell);
+  var tableContainer = document.getElementById('spellTable');
+  tableContainer.appendChild(newRow);
+};
 //weapon attack!
 var weaponAttacks = [];
-
 function WeaponAttack(name, diceType, diceNumber, baseStat, description){
   this.name = name;
   this.diceType = diceType;
@@ -20,10 +37,11 @@ function submitAttack(event){
   var description =  document.querySelectorAll('input[name="description"]')[0];
 
   var weaponAttack = new WeaponAttack( name.value, diceType.value, diceNumber.value, baseStat.value, description.value);
+  weaponAttack.render();
 
   weaponAttacks.push(weaponAttack);
-
   console.log(weaponAttacks);
+  localStorage.setItem('weaponAttacks', JSON.stringify(weaponAttacks));;
 };
 //spell Attacks!
 var spellAttacks = [];
@@ -48,8 +66,9 @@ function submitSpell(event){
   var description =  document.querySelectorAll('input[name="description"]')[1];
 
   var spellAttack = new SpellAttack( name.value, diceType.value, diceNumber.value, baseStat.value, spellLevel.value, description.value);
+  spellAttack.render();
 
   spellAttacks.push(spellAttack);
-
   console.log(spellAttacks);
+  localStorage.setItem('spellAttacks', JSON.stringify(spellAttacks));
 };

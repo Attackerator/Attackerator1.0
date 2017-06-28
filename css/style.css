@@ -34,8 +34,10 @@ body{
   min-height: 1000px;
   max-width: 1000px;
   margin: 10px auto;
+  height: 1000px;
 }
 .wrapper{
+  height: 1000px;
   margin: auto;
   background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/DnD_Giant.png/424px-DnD_Giant.png);
   background-repeat: no-repeat;
