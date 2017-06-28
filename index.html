@@ -3,6 +3,7 @@
 <head>
   <title>Nerdbetter</title>
   <link href="css/style.css" rel="stylesheet"/>
+  <link href='css/frontButtons.css' rel='stylesheet'/>
   <link href="https://fonts.googleapis.com/css?family=Trade+Winds" rel="stylesheet">
 </head>
 <body>
@@ -44,24 +45,34 @@
         <input id="sub-stat" class="create-stat" type="submit" name="create" value="create"/>
       </form>
     </div>
-    <form id='attack'>
-    <label>Choose Attack: <select id='attacks'></select></label>
-    <input type='submit' name='attack' />
-    </form>
-    <form id = 'saveForm'>
-      Save Stat: <select id='saveStat'name='saveStat'>
-      <option value="strength">Strength</option>
-      <option value="dexterity">Dexterity</option>
-      <option value="constitution">Constitution</option>
-      <option value='intelligence'>Intelligence</option>
-      <option value="wisdom">Wisdom</option>
-      <option value="charisma">Charisma</option>
-    </select><br/>
-    <input id='saveSubmit' type='submit' name='save'/>
-    </form>
-    <button id='initiativeButton'>Initiative</button>
-    <p id='display'>
-    </p>
+    <div id='buttonWrapper'>
+      <div class='displayDiv'>
+        <p id='display'>
+        </p>
+      </div>
+      <div class='attackDiv'>
+        <form id='attack'>
+        <label id='attackSelect'>Choose Attack: <select id='attacks'></select></label>
+        <input id='attackSubmit' type='submit' name='attack' />
+        </form>
+      </div>
+      <div id='saveDiv'>
+        <form id = 'saveForm'>
+          Save Stat: <select id='saveStat' name='saveStat'>
+            <option value="strength">Strength</option>
+            <option value="dexterity">Dexterity</option>
+            <option value="constitution">Constitution</option>
+            <option value='intelligence'>Intelligence</option>
+            <option value="wisdom">Wisdom</option>
+            <option value="charisma">Charisma</option>
+          </select><br/>
+          <input id='saveSubmit' type='submit' name='save'/>
+        </form>
+      </div>
+      <div id='initDiv'>
+        <button id='initiativeButton'>Initiative</button>
+      </div>
+    </div>
     <footer>
   <footer>
     <h3>@Attackerator</h3>
