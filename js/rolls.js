@@ -3,46 +3,44 @@ console.log('rolls.js loaded');
 
 function abilityScore(baseStat) {
     var stat = Character[baseStat];
-    var bonus;
-    if(2 <= stat <= 3 ){
-      bonus = -4;
-      return bonus;
+    if(stat <= 3 ){
+      return -4;
     }
-    if(4 <= stat <= 5 ){
-      bonus = -3;
-      return bonus;
+    if(stat <= 5 ){
+      return -3;
+
     }
-    if(6 <= stat <= 7 ){
-      bonus = -2;
-      return bonus;
+    if(stat <= 7 ){
+      return -2;
+
     }
-    if(8 <= stat <= 9 ){
-      bonus = -1;
-      return bonus;
+    if(stat <= 9 ){
+      return -1;
+
     }
-    if(10 <= stat <= 11 ){
-      bonus = 0;
-      return bonus;
+    if(stat <= 11 ){
+      return 0;
+
     }
-    if(12 <= stat <= 13 ){
-      bonus = 1;
-      return bonus;
+    if(stat <= 13 ){
+      return 1;
+
     }
-    if(14 <= stat <= 15 ){
-      bonus = 2;
-      return bonus;
+    if(stat <= 15 ){
+      return 2;
+
     }
-    if(16 <= stat <= 17){
-      bonus = 3;
-      return bonus;
+    if(stat <= 17){
+      return 3;
+
     }
-    if(18 <= stat <= 19 ){
-      bonus = 4;
-      return bonus;
+    if(stat <= 19 ){
+      return 4;
+
     }
-    if(20 <= stat <= 21 ){
-      bonus = 5;
-      return bonus;
+    if(stat <= 21 ){
+      return 5;
+
     }
 }
 
