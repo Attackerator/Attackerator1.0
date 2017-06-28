@@ -17,7 +17,6 @@ SpellAttack.prototype.render = function (){
   tableContainer.appendChild(newRow);
 };
 //weapon attack!
-var weaponAttacks = [];
 function WeaponAttack(name, diceType, diceNumber, baseStat, description){
   this.name = name;
   this.diceType = diceType;
@@ -25,7 +24,7 @@ function WeaponAttack(name, diceType, diceNumber, baseStat, description){
   this.baseStat = baseStat;
   this.description = description;
 }
-//submit for weaponAttacks
+//submit for weaponattacks
 var form = document.querySelectorAll('form')[0];
 form.addEventListener('submit', submitAttack);
 function submitAttack(event){
@@ -39,12 +38,11 @@ function submitAttack(event){
   var weaponAttack = new WeaponAttack( name.value, diceType.value, diceNumber.value, baseStat.value, description.value);
   weaponAttack.render();
 
-  weaponAttacks.push(weaponAttack);
-  console.log(weaponAttacks);
-  localStorage.setItem('weaponAttacks', JSON.stringify(weaponAttacks));;
+  attacks.push(weaponAttack);
+  console.log(attacks);
+  localStorage.setItem('attacks', JSON.stringify(attacks));;
 };
-//spell Attacks!
-var spellAttacks = [];
+//spell attacks!
 function SpellAttack(name, diceType, diceNumber, baseStat, spellLevel, description){
   this.name = name;
   this.diceType = diceType;
@@ -53,7 +51,7 @@ function SpellAttack(name, diceType, diceNumber, baseStat, spellLevel, descripti
   this.spellLevel = spellLevel;
   this.description = description;
 }
-//submit for spellAttacks
+//submit for spellattacks
 var form = document.querySelectorAll('form')[1];
 form.addEventListener('submit', submitSpell);
 function submitSpell(event){
@@ -68,7 +66,7 @@ function submitSpell(event){
   var spellAttack = new SpellAttack( name.value, diceType.value, diceNumber.value, baseStat.value, spellLevel.value, description.value);
   spellAttack.render();
 
-  spellAttacks.push(spellAttack);
-  console.log(spellAttacks);
-  localStorage.setItem('spellAttacks', JSON.stringify(spellAttacks));
+  attacks.push(spellAttack);
+  console.log(attacks);
+  localStorage.setItem('attacks', JSON.stringify(attacks));;
 };
