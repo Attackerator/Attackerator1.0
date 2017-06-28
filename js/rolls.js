@@ -48,4 +48,20 @@ function attackRoll () {
   var selectedAttack = document.getElementById('attacks').value;
   selectedAttack = attacks[selectedAttack];
   console.log(selectedAttack);
+
+  var diceType = parseInt(selectedAttack[diceType]);
+  var diceNumber = parseInt(selectedAttack[diceNumber]);
+  console.log(typeof(diceType));
+  console.log(typeof(diceNumber));
+
+  var rolls = [];
+  for (var i = 0; i < diceNumber; i++){
+    var randomNumber = Math.floor(Math.random() * (diceType + 1));
+    rolls.push(randomNumber);
+  }
+  var total = 0;
+  for(var i = 0; i < rolls.length; i++){
+    var index = rolls[i];
+    total += index;
+  }
 }
