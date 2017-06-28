@@ -45,5 +45,6 @@ function abilityScore(baseStat) {
 }
 
 function attackRoll () {
-
+  var selectedAttack = document.getElementById('attacks').value;
+  selectedAttack = attacks[selectedAttack];
 }
