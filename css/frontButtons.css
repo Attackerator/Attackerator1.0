@@ -1,7 +1,6 @@
 #buttonWrapper{
-  border: 1px solid black;
   width: 100%;
-  height: 500px;
+  height: 300px;
   margin:auto;
   position: relative;
 }
@@ -11,7 +10,10 @@
   width:300px;
   border-radius: 50%;
   box-shadow: -4px 29px 60px 2px rgba(0,0,0,0.75);
-  background-color: #EBE6BC;
+  background-image: url(images/DnD_Giant.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   border: 3px solid black;
   position: absolute;
   margin:auto;
@@ -19,9 +21,10 @@
   right:0;
   top: 0;
   bottom: 0;
+  box-shadow: inset 0px 0px 10px rgba(0,0,0,.9);
 }
 #display{
-  color: white;
+  color: #F22B29;
   text-shadow:
        3px 3px 0 #000,
      -1px -1px 0 #000,
@@ -34,7 +37,7 @@
   top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Sigmar One', cursive;
 }
 #attackDiv{
   display: block;
@@ -53,24 +56,26 @@
   margin-left: 10px;
 }
 #attackSelect select{
-  background-image: linear-gradient(to bottom, #666633, #ebeb23);
+  background-color: #B38A58;
   height:100px;
   padding-left: 20px;
   border-radius: 25%;
   font-size: 30px;
-
+  box-shadow:inset 0px 0px 10px rgba(0,0,0,0.9);
 }
 #attackSubmit{
   float: right;
-  background-image: linear-gradient(to bottom, #666633, #ebeb23);
   height:100px;
   border-radius: 25%;
   width: 45%;
   margin-top: 5px;
   font-size: 50px;
   padding-left: 50px;
+  background-color: #B38A58;
+  box-shadow:inset 0px 0px 10px rgba(0,0,0,0.9);
 }
 #attackSubmit:hover, #attackSelect select:hover{
+  box-shadow: none;
 }
 select{
   font-family: 'Days One', sans-serif;
@@ -106,8 +111,9 @@ button{
   border-radius: 25%;
   margin-top: 5px;
   margin-left: 10px;
-  background-color: #504D35;
+  background-color: #B38A58;
   font-size: 30px;
+  box-shadow:inset 0px 0px 10px rgba(0,0,0,0.9);
 }
 #saveStat{
   float: right;
@@ -116,7 +122,8 @@ button{
   padding-left: 50px;
   border-radius: 25%;
   font-size: 30px;
-  background-color: #504D35;
+  background-color: #B38A58;
+  box-shadow:inset 0px 0px 10px rgba(0,0,0,0.9);
 }
 #initiativeButton{
   margin-top: 50px;
@@ -126,5 +133,6 @@ button{
   border-radius: 25%;
   text-align: center;
   font-size: 30px;
-  background-color: #504D35;
+  background-color: #B38A58;
+  box-shadow:inset 0px 0px 10px rgba(0,0,0,0.9);
 }
