@@ -6,8 +6,10 @@ var selectedCharacter;
 function attackOnLoad() {
   load();
   renderCharacterList();
-  renderCharacter(characters[0]);
+  if (localStorage.getItem('characters') != null){
+  renderCharacter(characters[selectedCharacter]);
   attackForm();
+  }
 }
 function buildOnLoad(){
   load();
