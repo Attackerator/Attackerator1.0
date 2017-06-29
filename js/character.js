@@ -3,6 +3,7 @@ console.log('character.js loaded');
 //character constuctor
 function Character(name) {
   this.name = name;
+  this.health = health;
   this.strength = this.generateStat();
   this.dexterity = this.generateStat();
   this.constitution = this.generateStat();
@@ -75,4 +76,3 @@ function renderCharacter(character){
   var charText = charCharisma.textContent;
   charCharisma.textContent = character.charisma;
 }
-//grab dispaly name and appendChild with name
