@@ -45,8 +45,10 @@ function updateStats(event){
   characters.push(character);
   console.log(characters);
   selectedCharacter = characters.length - 1;
+  localStorage.setItem('selectedCharacter', JSON.stringify(selectedCharacter));
   localStorage.setItem('characters', JSON.stringify(characters));
   renderCharacter(character);
+  renderCharacterList();
   attackForm();
 };
 function renderCharacter(character){
@@ -82,6 +84,9 @@ function renderCharacter(character){
 function renderCharacterList() {
   console.log('rendering character list');
   var characterList = document.getElementById('characters');
+  while (characterList.firstChild) {
+    characterList.removeChild(characterList.firstChild);
+    }
   for(var i = 0; i < characters.length; i++) {
   var characterOption = characters[i];
   var el = document.createElement('option');
