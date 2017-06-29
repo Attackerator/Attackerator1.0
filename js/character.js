@@ -44,8 +44,10 @@ function updateStats(event){
 
   characters.push(character);
   console.log(characters);
+  selectedCharacter = characters.length - 1;
   localStorage.setItem('characters', JSON.stringify(characters));
   renderCharacter(character);
+  attackForm();
 };
 function renderCharacter(character){
   var charName = document.getElementById('displayName');
