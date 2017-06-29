@@ -28,7 +28,15 @@
   height: 30px;
   text-align: center;
   font-size: 2em;
-  margin: 0px auto 0px auto;
+  margin: 0px auto 0px 50%;
+}
+.displayHealth{
+  border: 1px solid;
+  border-radius: 5px;
+  width: 20px;
+  height: 20px;
+  font-size: 2em;
+  po
 }
 body{
   min-height: 1000px;
