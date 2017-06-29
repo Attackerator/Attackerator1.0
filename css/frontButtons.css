@@ -67,7 +67,8 @@
   border-radius: 25%;
   width: 45%;
   margin-top: 5px;
-  margin-left: 10px;
+  font-size: 50px;
+  padding-left: 50px;
 }
 #attackSubmit:hover, #attackSelect select:hover{
   background-image: linear-gradient(to bottom, #c9d61a, #64662d);
@@ -82,31 +83,50 @@ input{
 button{
   font-family: 'Days One', sans-serif;
 }
+.bottomDiv{
+  height:300px;
+  width: 100%;
+}
+#bottomRight{
+  width: 45%;
+  height: 300px;
+  float: right;
+}
+#bottomLeft{
+  width: 45%;
+  height: 300px;
+  float: left;
+}
+
 #saveForm{
-  width:75%;
-  margin: 50px auto;
+  margin-top: 50px;
 }
 #saveSubmit{
-  height:50px;
+  float: right;
+  height:75px;
+  width:50%;
   border-radius: 25%;
-  width: 25%;
   margin-top: 5px;
   margin-left: 10px;
   background-color: #504D35;
+  font-size: 30px;
 }
 #saveStat{
-  width:45%;
+  float: right;
   height:75px;
-  padding-left: 20px;
+  width: 75%;
+  padding-left: 50px;
   border-radius: 25%;
   font-size: 30px;
   background-color: #504D35;
 }
 #initiativeButton{
-  float: right;
-  width:35%;
+  margin-top: 50px;
+  width: 75%;
+  float: left;
   height:75px;
   border-radius: 25%;
+  text-align: center;
   font-size: 30px;
   background-color: #504D35;
 }

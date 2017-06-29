@@ -16,8 +16,10 @@ input[type='submit']{
   padding: 20px;
 }
 #weaponTable{
-
+  margin: auto;
+  background-color: red;
 }
 #spellTable{
-
+  margin: auto;
+  background-color: purple;
 }
