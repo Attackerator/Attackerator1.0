@@ -67,19 +67,25 @@
         <input id='attackSubmit' type='submit' name='attack' value='Attack!'/>
         </form>
       </div>
-       <form id = 'saveForm'>
-         <button id='initiativeButton'>Initiative</button>
-          <select id='saveStat' name='saveStat' >
-            <option value="strength">Strength</option>
-            <option value="dexterity">Dexterity</option>
-            <option value="constitution">Constitution</option>
-            <option value='intelligence'>Intelligence</option>
-            <option value="wisdom">Wisdom</option>
-            <option value="charisma">Charisma</option>
-          </select>
-          </br>
-          <input id='saveSubmit' type='submit' name='save' value='Save'/>
-        </form>
+        <div class='bottomDiv'>
+          <div id='bottomLeft'>
+           <form id = 'saveForm'>
+              <select id='saveStat' name='saveStat' >
+                <option value="strength">Strength</option>
+                <option value="dexterity">Dexterity</option>
+                <option value="constitution">Constitution</option>
+                <option value='intelligence'>Intelligence</option>
+                <option value="wisdom">Wisdom</option>
+                <option value="charisma">Charisma</option>
+              </select>
+            </br>
+              <input id='saveSubmit' type='submit' name='save' value='Save'/>
+            </form>
+          </div>
+          <div id='bottomRight'>
+            <button id='initiativeButton'>Initiative</button>
+          </div>
+        </div>
       </div>
     </div>
   <footer>
