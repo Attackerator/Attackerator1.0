@@ -4,22 +4,22 @@ console.log('rolls.js loaded');
 function abilityScore(baseStat) {
   var stat;
   if(baseStat == 'strength'){
-    stat = characters[0].strength;
+    stat = characters[selectedCharacter].strength;
   }
   else if(baseStat == 'dexterity'){
-    stat = characters[0].dexterity;
+    stat = characters[selectedCharacter].dexterity;
   }
   else if(baseStat == 'constitution'){
-    stat = characters[0].constitution;
+    stat = characters[selectedCharacter].constitution;
   }
   else if(baseStat == 'intelligence'){
-    stat = characters[0].intelligence;
+    stat = characters[selectedCharacter].intelligence;
   }
   else if(baseStat == 'wisdom'){
-    stat = characters[0].wisdom;
+    stat = characters[selectedCharacter].wisdom;
   }
   else if(baseStat == 'charisma'){
-    stat = characters[0].charisma;
+    stat = characters[selectedCharacter].charisma;
   }
   if(stat <= 3 ){
     return -4;
@@ -82,7 +82,7 @@ form.addEventListener('submit', attackRoll);
 function attackRoll (event) {
   event.preventDefault();
   var selectedAttack = document.getElementById('attacks').value;
-  selectedAttack = attacks[selectedAttack];
+  selectedAttack = characters[selectedCharacter].attacks[selectedAttack];
   console.log(selectedAttack);
 
   var diceType = parseInt(selectedAttack.diceType);
@@ -103,7 +103,7 @@ var initiativeButton = document.getElementById('initiativeButton');
 initiativeButton.addEventListener('click', initiativeRoll);
 function initiativeRoll(){
   var roll = diceRoll(1, 20);
-  roll += characters[0].wisdom;
+  roll += characters[selectedCharacter].wisdom;
   console.log(roll);
   document.getElementById('display').innerText = roll;
 }

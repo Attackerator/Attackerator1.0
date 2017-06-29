@@ -9,6 +9,7 @@ function Character(name) {
   this.intelligence = this.generateStat();
   this.wisdom = this.generateStat();
   this.charisma = this.generateStat();
+  this.attacks = [];
 }
 
 //method for generating stats | roll 4 D6 then take out the lowest number and add the rest together
@@ -74,5 +75,24 @@ function renderCharacter(character){
   var charCharisma = document.getElementById('char');
   var charText = charCharisma.textContent;
   charCharisma.textContent = character.charisma;
+}
+
+function renderCharacterList() {
+  console.log('rendering character list');
+  var characterList = document.getElementById('characters');
+  for(var i = 0; i < characters.length; i++) {
+  var characterOption = characters[i];
+  var el = document.createElement('option');
+  el.textContent = characterOption.name;
+  el.value = i;
+  characterList.appendChild(el);
+};
+}
+
+function updateSelectedCharacter(){
+  var characterList = document.getElementById('characters');
+  selectedCharacter = characterList.value;
+  localStorage.setItem('selectedCharacter', JSON.stringify(selectedCharacter));;
+  renderCharacter(characters[selectedCharacter]);
 }
 //grab dispaly name and appendChild with name

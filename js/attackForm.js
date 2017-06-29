@@ -1,9 +1,9 @@
 
 function attackForm() {
-console.log(attacks);
+console.log(characters[selectedCharacter].attacks);
 var select = document.getElementById('attacks');
-for(var i = 0; i < attacks.length; i++) {
-  var attack = attacks[i];
+for(var i = 0; i < characters[selectedCharacter].attacks.length; i++) {
+  var attack = characters[selectedCharacter].attacks[i];
   var el = document.createElement('option');
   el.textContent = attack.name;
   el.value = i;
