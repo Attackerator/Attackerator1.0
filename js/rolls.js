@@ -103,7 +103,7 @@ var initiativeButton = document.getElementById('initiativeButton');
 initiativeButton.addEventListener('click', initiativeRoll);
 function initiativeRoll(){
   var roll = diceRoll(1, 20);
-  roll += characters[selectedCharacter].dexterity;
+  roll += abilityScore('dexterity');
 
   console.log(roll);
   document.getElementById('display').innerText = roll;

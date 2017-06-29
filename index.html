@@ -5,6 +5,7 @@
   <link href="css/style.css" rel="stylesheet"/>
   <link href='css/frontButtons.css' rel='stylesheet'/>
   <link href="https://fonts.googleapis.com/css?family=Days+One|Permanent+Marker|Trade+Winds" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Sigmar+One" rel="stylesheet">
 </head>
 <body onload="attackOnLoad();">
   <div class="wrapper">
@@ -65,7 +66,9 @@
       </div>
       <div id='attackDiv'>
         <form id='attack'>
-        <label id='attackSelect'><select id='attacks'></select></label>
+        <label id='attackSelect'><select id='attacks'>
+          <option value="" disabled selected>Select Attack</option>
+        </select></label>
         <input id='attackSubmit' type='submit' name='attack' value='Attack!'/>
         </form>
       </div>
@@ -73,6 +76,7 @@
           <div id='bottomLeft'>
            <form id = 'saveForm'>
               <select id='saveStat' name='saveStat' >
+                <option value="" disabled selected>Select Save</option>
                 <option value="strength">Strength</option>
                 <option value="dexterity">Dexterity</option>
                 <option value="constitution">Constitution</option>
