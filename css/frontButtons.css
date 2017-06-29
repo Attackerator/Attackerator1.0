@@ -1,47 +1,109 @@
-.buttonWrapper{
+#buttonWrapper{
   border: 1px solid black;
   width: 100%;
-  height: 1000px;
+  height: 500px;
   margin:auto;
   position: relative;
 }
-.displayDiv{
+#displayDiv{
   z-index: 1;
   height:300px;
   width:300px;
-  border: 5px solid black;
   border-radius: 50%;
+  box-shadow: -4px 29px 60px 2px rgba(0,0,0,0.75);
   background-color: white;
+  border: 3px solid lightblue;
   position: absolute;
   margin:auto;
   left:0;
   right:0;
   top: 0;
   bottom: 0;
-
 }
-.attackDiv{
-  background-color: blue;
-  border: 5px solid black;
-  border-radius: 10px;
-  width: 75%;
-  margin: 100px auto 0px auto;
+#display{
+  color: white;
+  text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+  position: relative;
+  float:left;
+  font-size: 100px;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Permanent Marker', cursive;
+}
+#attackDiv{
+  display: block;
+  border-radius: 25%;
+  width: 85%;
+  margin: 125px auto 0px auto;
   height: 75px;
 }
-.attackSelect{
-  float:left;
-  padding-top: 75px;
+#attackSelect{
+  position: relative;
+  float: left;
+  height:65px;
+  border-radius: 25%;
+  width: 45%;
+  margin-top: 5px;
+  margin-left: 10px;
 }
-.attackSubmit{
-  float:right;
-}
-.saveDiv{
-  border: 1px solid black;
-}
-.initDiv{
-  border: 1px solid black;
-}
-.saveDiv{
-  border: 1px solid black;
+#attackSelect select{
+  background-image: linear-gradient(to bottom, #666633, #ebeb23);
+  height:100px;
+  padding-left: 20px;
+  border-radius: 25%;
+  font-size: 30px;
 
+}
+#attackSubmit{
+  float: right;
+  background-image: linear-gradient(to bottom, #666633, #ebeb23);
+  height:100px;
+  border-radius: 25%;
+  width: 45%;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+#attackSubmit:hover, #attackSelect select:hover{
+  background-image: linear-gradient(to bottom, #c9d61a, #64662d);
+}
+select{
+  font-family: 'Days One', sans-serif;
+  width: 100%;
+}
+input{
+  font-family: 'Days One', sans-serif;
+}
+button{
+  font-family: 'Days One', sans-serif;
+}
+#saveForm{
+  width:75%;
+  margin: 50px auto;
+}
+#saveSubmit{
+  height:50px;
+  border-radius: 25%;
+  width: 25%;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+#saveStat{
+  width:45%;
+  height:75px;
+  padding-left: 20px;
+  border-radius: 25%;
+  font-size: 30px;
+}
+#initiativeButton{
+  float: right;
+  width:35%;
+  height:75px;
+  border-radius: 25%;
+  font-size: 30px;
 }
