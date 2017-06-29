@@ -94,5 +94,6 @@ function updateSelectedCharacter(){
   selectedCharacter = characterList.value;
   localStorage.setItem('selectedCharacter', JSON.stringify(selectedCharacter));;
   renderCharacter(characters[selectedCharacter]);
+  attackForm();
 }
 //grab dispaly name and appendChild with name
