@@ -71,7 +71,6 @@
   padding-left: 50px;
 }
 #attackSubmit:hover, #attackSelect select:hover{
-  background-image: linear-gradient(to bottom, #c9d61a, #64662d);
 }
 select{
   font-family: 'Days One', sans-serif;
@@ -97,7 +96,6 @@ button{
   height: 300px;
   float: left;
 }
-
 #saveForm{
   margin-top: 50px;
 }

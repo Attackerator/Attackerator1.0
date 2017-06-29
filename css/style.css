@@ -5,6 +5,7 @@
   border: 1px solid;
   font-family: 'Permanent Marker', cursive;
   background-color: rgba(205,170,125,0.5);
+
 }
 .str, .dex, .con, .int, .wis, .char{
   border: 1px solid;
