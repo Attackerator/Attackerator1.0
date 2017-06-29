@@ -3,7 +3,8 @@
 <head>
   <title>Nerdbetter</title>
   <link href="css/style.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css?family=Trade+Winds" rel="stylesheet">
+  <link href='css/frontButtons.css' rel='stylesheet'/>
+  <link href="https://fonts.googleapis.com/css?family=Days+One|Permanent+Marker|Trade+Winds" rel="stylesheet">
 </head>
 <body>
   <div class="wrapper">
@@ -44,25 +45,32 @@
         <input id="sub-stat" class="create-stat" type="submit" name="create" value="create"/>
       </form>
     </div>
-    <form id='attack'>
-    <label>Choose Attack: <select id='attacks'></select></label>
-    <input type='submit' name='attack' />
-    </form>
-    <form id = 'saveForm'>
-      Save Stat: <select id='saveStat'name='saveStat'>
-      <option value="strength">Strength</option>
-      <option value="dexterity">Dexterity</option>
-      <option value="constitution">Constitution</option>
-      <option value='intelligence'>Intelligence</option>
-      <option value="wisdom">Wisdom</option>
-      <option value="charisma">Charisma</option>
-    </select><br/>
-    <input id='saveSubmit' type='submit' name='save'/>
-    </form>
-    <button id='initiativeButton'>Initiative</button>
-    <p id='display'>
-    </p>
-    <footer>
+    <div id='buttonWrapper'>
+      <div id='displayDiv'>
+        <p id='display'>
+        </p>
+      </div>
+      <div id='attackDiv'>
+        <form id='attack'>
+        <label id='attackSelect'><select id='attacks'></select></label>
+        <input id='attackSubmit' type='submit' name='attack' value='Attack!'/>
+        </form>
+      </div>
+       <form id = 'saveForm'>
+         <button id='initiativeButton'>Initiative</button>
+          <select id='saveStat' name='saveStat' >
+            <option value="strength">Strength</option>
+            <option value="dexterity">Dexterity</option>
+            <option value="constitution">Constitution</option>
+            <option value='intelligence'>Intelligence</option>
+            <option value="wisdom">Wisdom</option>
+            <option value="charisma">Charisma</option>
+          </select>
+          </br>
+          <input id='saveSubmit' type='submit' name='save' value='Save'/>
+        </form>
+      </div>
+    </div>
   <footer>
     <h3>@Attackerator</h3>
   </footer>
@@ -70,6 +78,5 @@
   <script src='js/attackForm.js'></script>
   <script src="js/character.js"></script>
   <script src='js/rolls.js'></script>
-</div>
 </body>
 </html>

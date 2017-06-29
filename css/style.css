@@ -3,7 +3,7 @@
   text-align: center;
   clear:both;
   border: 1px solid;
-  font-family: 'Trade Winds', cursive;
+  font-family: 'Permanent Marker', cursive;
   background-color: rgba(205,170,125,0.5);
 }
 .str, .dex, .con, .int, .wis, .char{
@@ -39,7 +39,7 @@ body{
 .wrapper{
   height: 1000px;
   margin: auto;
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/DnD_Giant.png/424px-DnD_Giant.png);
+  background-image: url(images/mapbackground.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -50,7 +50,7 @@ body{
   display: none;
 }
 nav{
-  font-family: 'Trade Winds', cursive;
+  font-family: 'Permanent Marker', cursive;
   float: right;
 }
 nav ul{
@@ -72,7 +72,7 @@ nav a{
 footer{
   width: 100%;
   margin: auto;
-  font-family: 'Trade Winds', cursive;
+  font-family: 'Permanent Marker', cursive;
   background-color: rgba(205,170,125,0.5);
   text-align: center;
 }
