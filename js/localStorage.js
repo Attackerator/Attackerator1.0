@@ -1,27 +1,30 @@
 'use strict';
 console.log('localStorage.js loaded');
 
-var attacks;
 var characters;
-window.onload = function() {
+var selectedCharacter;
+function attackOnLoad() {
   load();
+  renderCharacterList();
+  renderCharacter(characters[0]);
   attackForm();
-};
+}
+function buildOnLoad(){
+  load();
+}
 function load() {
-  if (localStorage.getItem('attacks') != null){
-    attacks = JSON.parse(localStorage.getItem('attacks'));
-    console.log('attacks loaded');
-  } else {
-    console.log('attacks not found');
-    attacks = [];
-  }
   if (localStorage.getItem('characters') != null){
     characters = JSON.parse(localStorage.getItem('characters'));
     console.log('characters loaded');
-    renderCharacter(characters[0]);
   } else {
     console.log('characters not found');
     characters = [];
+  }
+  if (localStorage.getItem('selectedCharacter') != null){
+    selectedCharacter = JSON.parse(localStorage.getItem('selectedCharacter'));
+    console.log('selectedcharacter loaded');
+  } else {
+    console.log('No selectedCharacter found');
   }
 }
 function deleteStorage(){

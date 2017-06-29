@@ -74,9 +74,9 @@ function submitAttack(event){
   var weaponAttack = new WeaponAttack( name.value, diceType.value, diceNumber.value, baseStat.value, description.value);
   weaponAttack.render();
 
-  attacks.push(weaponAttack);
-  console.log(attacks);
-  localStorage.setItem('attacks', JSON.stringify(attacks));
+  characters[selectedCharacter].attacks.push(weaponAttack);
+  console.log(selectedCharacter.attacks);
+  localStorage.setItem('characters', JSON.stringify(characters));;
 };
 //spell attacks!
 function SpellAttack(name, diceType, diceNumber, baseStat, spellLevel, description){
@@ -102,7 +102,7 @@ function submitSpell(event){
   var spellAttack = new SpellAttack( name.value, diceType.value, diceNumber.value, baseStat.value, spellLevel.value, description.value);
   spellAttack.render();
 
-  attacks.push(spellAttack);
-  console.log(attacks);
-  localStorage.setItem('attacks', JSON.stringify(attacks));;
+  characters[selectedCharacter].attacks.push(spellAttack);
+  console.log(selectedCharacter.attacks);
+  localStorage.setItem('characters', JSON.stringify(characters));;
 };

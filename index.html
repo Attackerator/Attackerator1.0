@@ -6,7 +6,7 @@
   <link href='css/frontButtons.css' rel='stylesheet'/>
   <link href="https://fonts.googleapis.com/css?family=Days+One|Permanent+Marker|Trade+Winds" rel="stylesheet">
 </head>
-<body>
+<body onload="attackOnLoad();">
   <div class="wrapper">
     <nav>
       <ul>
@@ -53,6 +53,8 @@
         <input type="text" name="name" placeholder="Enter Name"/>
         <input id="sub-stat" class="create-stat" type="submit" name="create" value="create"/>
       </form>
+      <select id='characters' name='characters' onchange="updateSelectedCharacter()">
+      </select>
     </div>
     <div id='buttonWrapper'>
       <div id='displayDiv'>
