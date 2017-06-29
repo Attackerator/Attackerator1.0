@@ -15,14 +15,10 @@
 }
 .character-info ul{
   display: inline-block;
-  padding-left: 10px;
+  margin-left: 10px;
 }
 .character-info li{
   display: block;
-}
-.create-stat{
-    display: block;
-    margin: 0px auto;
 }
 .name{
   width: 170px;
