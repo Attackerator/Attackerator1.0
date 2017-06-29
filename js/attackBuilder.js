@@ -1,57 +1,20 @@
 WeaponAttack.prototype.render = function (){
-  var weaponTable = document.getElementById('weaponTable');
-  var headers = ['Name', 'Description', 'Base Stat', 'Dice Number', 'Dice Type'];
-  for (var i = 0; i < headers.length; i++){
-    var header = document.createElement('th');
-    header.textContent = headers[i];
-    weaponTable.appendChild(header);
-  }
-
-  var attackRow = document.createElement('tr');
-  weaponTable.appendChild(attackRow);
-  var attackName = document.createElement('td');
-  attackName.textContent = this.name;
-  attackRow.appendChild(attackName);
-  var attackDescription = document.createElement('td');
-  attackDescription.textContent = this.description;
-  attackRow.appendChild(attackDescription);
-  var attackStat = document.createElement('td');
-  attackStat.textContent = this.baseStat;
-  attackRow.appendChild(attackStat);
-  var attackDiceNumber = document.createElement('td');
-  attackDiceNumber.textContent = this.diceNumber;
-  attackRow.appendChild(attackDiceNumber);
-  var attackDiceType = document.createElement('td');
-  attackDiceType.textContent = this.diceType;
-  attackRow.appendChild(attackDiceType);
+  var newWeapon = document.createElement('td');
+  var weaponName = document.createTextNode(this.name);
+  newWeapon.appendChild(weaponName);
+  var newRow = document.createElement('tr');
+  newRow.appendChild(newWeapon);
+  var tableContainer = document.getElementById('weaponTable');
+  tableContainer.appendChild(newRow);
 };
-
 SpellAttack.prototype.render = function (){
-  var spellTable = document.getElementById('spellTable');
-  var headers = ['Name', 'Description', 'Base Stat', 'Dice Number', 'Dice Type'];
-  for (var i = 0; i < headers.length; i++){
-    var header = document.createElement('th');
-    header.textContent = headers[i];
-    spellTable.appendChild(header);
-  }
-
-  var attackRow = document.createElement('tr');
-  spellTable.appendChild(attackRow);
-  var attackName = document.createElement('td');
-  attackName.textContent = this.name;
-  attackRow.appendChild(attackName);
-  var attackDescription = document.createElement('td');
-  attackDescription.textContent = this.description;
-  attackRow.appendChild(attackDescription);
-  var attackStat = document.createElement('td');
-  attackStat.textContent = this.baseStat;
-  attackRow.appendChild(attackStat);
-  var attackDiceNumber = document.createElement('td');
-  attackDiceNumber.textContent = this.diceNumber;
-  attackRow.appendChild(attackDiceNumber);
-  var attackDiceType = document.createElement('td');
-  attackDiceType.textContent = this.diceType;
-  attackRow.appendChild(attackDiceType);
+  var newSpell = document.createElement('td');
+  var spellName = document.createTextNode(this.name);
+  newSpell.appendChild(spellName);
+  var newRow = document.createElement('tr');
+  newRow.appendChild(newSpell);
+  var tableContainer = document.getElementById('spellTable');
+  tableContainer.appendChild(newRow);
 };
 //weapon attack!
 function WeaponAttack(name, diceType, diceNumber, baseStat, description){
@@ -60,7 +23,6 @@ function WeaponAttack(name, diceType, diceNumber, baseStat, description){
   this.diceNumber = diceNumber;
   this.baseStat = baseStat;
   this.description = description;
-  this.type = 'weapon';
 }
 //submit for weaponattacks
 var form = document.querySelectorAll('form')[0];
@@ -88,7 +50,6 @@ function SpellAttack(name, diceType, diceNumber, baseStat, spellLevel, descripti
   this.baseStat = baseStat;
   this.spellLevel = spellLevel;
   this.description = description;
-  this.type = 'spell';
 }
 //submit for spellattacks
 var form = document.querySelectorAll('form')[1];
