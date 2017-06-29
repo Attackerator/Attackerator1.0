@@ -1,8 +1,9 @@
 'use strict';
 console.log('character.js loaded');
 //character constuctor
-function Character(name) {
+function Character(name, health) {
   this.name = name;
+  this.health = health || 0;
   this.strength = this.generateStat();
   this.dexterity = this.generateStat();
   this.constitution = this.generateStat();
@@ -53,34 +54,43 @@ function updateStats(event){
 };
 function renderCharacter(character){
   var charName = document.getElementById('displayName');
-  var text = charName.textContent;
   charName.textContent = character.name;
 
   var charStrength = document.getElementById('str');
-  var strText = charStrength.textContent;
   charStrength.textContent = character.strength;
 
   var charDexterity = document.getElementById('dex');
-  var dexText = charDexterity.textContent;
   charDexterity.textContent = character.dexterity;
 
   var charConstitution = document.getElementById('con');
-  var conText = charConstitution.textContent;
   charConstitution.textContent = character.constitution;
 
   var charIntelligence = document.getElementById('int');
-  var intText = charIntelligence.textContent;
   charIntelligence.textContent = character.intelligence;
 
   var charWisdom = document.getElementById('wis');
-  var wisText = charWisdom.textContent;
   charWisdom.textContent = character.wisdom;
 
   var charCharisma = document.getElementById('char');
-  var charText = charCharisma.textContent;
   charCharisma.textContent = character.charisma;
-}
 
+  var charHealth = document.getElementById('displayHealth');
+  charHealth.textContent = character.health;
+}
+var minus = document.getElementById('minus');
+minus.addEventListener('click', subtractHealth);
+function subtractHealth(){
+  characters[selectedCharacter].health -= 1;
+  localStorage.setItem('characters', JSON.stringify(characters));
+  renderCharacter(characters[selectedCharacter]);
+}
+var plus = document.getElementById('plus');
+plus.addEventListener('click', addHealth);
+function addHealth(){
+  characters[selectedCharacter].health += 1;
+  localStorage.setItem('characters', JSON.stringify(characters));
+  renderCharacter(characters[selectedCharacter]);
+}
 function renderCharacterList() {
   console.log('rendering character list');
   var characterList = document.getElementById('characters');
@@ -103,4 +113,3 @@ function updateSelectedCharacter(){
   renderCharacter(characters[selectedCharacter]);
   attackForm();
 }
-//grab dispaly name and appendChild with name
