@@ -2,10 +2,7 @@
   min-height: 100px;
   text-align: center;
   clear:both;
-  border: 1px solid;
   font-family:'Sigmar One', cursive;
-  background-color: #436436;
-
 }
 .str, .dex, .con, .int, .wis, .char{
   color: #F22B29;
@@ -15,43 +12,71 @@
       1px -1px 0 #000,
       -1px 1px 0 #000,
        1px 1px 0 #000;
-  width: 75px;
-  height: 75px;
-  font-size: 50px;
+  width: 100px;
+  height: 100px;
+  font-size: 60px;
   background-image: url('images/D20.png');
   background-position: center;
   background-repeat: none;
   background-size: contain;
+}
+.chooseChar{
+  width:50%;
+  margin: auto;
+}
+#sub-stat{
+  color: #F22B29;
+  background-color: rgb(2, 24, 43);
+  box-shadow:inset 0px 0px 10px rgba(0,0,0,0.9);
+  height: 40px;
+  border-radius: 25%;
+  font-size: 20px;
 }
 .character-info ul{
   display: inline-block;
   margin-left: 10px;
 }
 .character-info li{
-  font-size: 20px;
+  font-size: 40px;
   display: block;
 }
 .name{
-  width: 170px;
   text-align: center;
   font-size: 3em;
+  text-decoration: underline;
   margin: 0px auto 0px auto;
 }
+#createName{
+  height:50px;
+  text-align: center;
+  border: 3px solid black;
+  font-size: 25px;
+}
+#characters{
+  color: #F22B29;
+  height: 50px;
+  text-align: center;
+  background-color: rgb(2, 24, 43);
+  box-shadow:inset 0px 0px 10px rgba(255,255,255,0.9);
+  border-radius: 25%;
+}
 .displayHealth{
-  border: 1px solid;
-  border-radius: 5px;
-  min-width: 20px;
-  min-height: 20px;
+  color: #F22B29;
+  text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+  font-size: 55px;
+  width: 25%;
+  min-height: 100px;
 }
-.healthImage{
-  max-height: 30px;
-  max-width: 30px;
-  margin-left: 25%;
-  margin-right: 25%;
-}
-.healthImage img{
-  max-width: 100%;
-  max-height: 100%;
+#minus, #plus{
+  color: #F22B29;
+  background-color: rgb(2, 24, 43);
+  box-shadow:inset 0px 0px 10px rgba(255,255,255,0.9);
+  border-radius: 50%;
 }
 body{
   margin: 10px auto;
@@ -61,40 +86,44 @@ body{
   background-size: cover;
 }
 .wrapper{
-  height: 1000px;
+  height: 1100px;
   margin: auto;
-  background-color: rgba(255, 255, 255, .5);
-  border: 1px solid black;
-  border-top-right-radius: 5%;
+  background-color: rgba(1, 151, 246, .5);
 }
 .currentPage{
   display: none;
 }
 nav{
   font-family: 'Sigmar One', cursive;
-
   float: right;
+
 }
 nav ul{
   margin-top: -5px;
 }
 nav li{
   display: inline-block;
-  border-top-right-radius:40%;
-  border: 1px solid black;
-  background-color: rgba(205,170,125,1);
-  box-shadow: -3px 3px 0px 1px rgba(0,0,0,1);
   font-size: 40px;
   padding: 10px 10px;
 }
 nav a{
   text-decoration: none;
+  text-shadow:
+       3px 3px 0 rgba(255, 255, 255, 0.5),
+     -1px -1px 0 rgba(255, 255, 255, 0.5),
+      1px -1px 0 rgba(255, 255, 255, 0.5),
+      -1px 1px 0 rgba(255, 255, 255, 0.5),
+       1px 1px 0 rgba(255, 255, 255, 0.5);
   color: black;
 }
 footer{
+  background-color: rgba(1, 151, 246, .5);
   width: 100%;
-  margin: auto;
+  margin: 0 auto;
   font-family: 'Sigmar One', cursive;
-  background-color: #F49D37;
   text-align: center;
+}
+footer h3{
+  margin: 0;
+  font-size: 30px;
 }

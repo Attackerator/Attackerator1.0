@@ -15,18 +15,17 @@
         <li class='currentPage'><a href='index.html'>Attack</a></li>
       </ul>
     </nav>
+    <ul>
+      <div id="health" class="health">
+        <button id="minus">-</button>
+        <span id="displayHealth" class="displayHealth"></span>
+        <button id="plus">+</button>
+      </div>
+    </ul>
     <div class="character-info">
       <div id="displayName" class="name"></div>
       <!--botton span botton-->
     <div class="allStat">
-      <ul>
-        <li class="healthImage"><img src="health-button.png" width="30px" height="30px"/></li>
-        <div id="health" class="health">
-          <button id="minus">-</button>
-          <span id="displayHealth" class="displayHealth"></span>
-          <button id="plus">+</button>
-        </div>
-      </ul>
       <ul>
         <li>STR</li>
         <div id="str" class="str"></div>
@@ -52,12 +51,14 @@
         <div id="char" class="char"></div>
       </ul>
     </div>
+    <div class='chooseChar'>
       <form>
-        <input type="text" name="name" placeholder="Enter Name"/>
+        <input id ='createName' type="text" name="name" placeholder="Enter Name"/>
         <input id="sub-stat" class="create-stat" type="submit" name="create" value="create"/>
       </form>
       <select id='characters' name='characters' onchange="updateSelectedCharacter()">
       </select>
+    </div>
     </div>
     <div id='buttonWrapper'>
       <div id='displayDiv'>
