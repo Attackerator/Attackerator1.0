@@ -1,7 +1,7 @@
-WeaponAttack.prototype.render = function (){
+WeaponAttack.prototype.render = function() {
   var weaponTable = document.getElementById('weaponTable');
   var headers = ['Name', 'Description', 'Base Stat', 'Dice Number', 'Dice Type'];
-  for (var i = 0; i < headers.length; i++){
+  for (var i = 0; i < headers.length; i++) {
     var header = document.createElement('th');
     header.textContent = headers[i];
     weaponTable.appendChild(header);
@@ -26,10 +26,10 @@ WeaponAttack.prototype.render = function (){
   attackRow.appendChild(attackDiceType);
 };
 
-SpellAttack.prototype.render = function (){
+SpellAttack.prototype.render = function() {
   var spellTable = document.getElementById('spellTable');
   var headers = ['Name', 'Description', 'Base Stat', 'Dice Number', 'Dice Type'];
-  for (var i = 0; i < headers.length; i++){
+  for (var i = 0; i < headers.length; i++) {
     var header = document.createElement('th');
     header.textContent = headers[i];
     spellTable.appendChild(header);
@@ -52,8 +52,8 @@ SpellAttack.prototype.render = function (){
   var attackDiceType = document.createElement('td');
   attackDiceType.textContent = this.diceType;
   attackRow.appendChild(attackDiceType);
-};//weapon attack!
-function WeaponAttack(name, diceType, diceNumber, baseStat, description){
+}; //weapon attack!
+function WeaponAttack(name, diceType, diceNumber, baseStat, description) {
   this.name = name;
   this.diceType = diceType;
   this.diceNumber = diceNumber;
@@ -63,15 +63,16 @@ function WeaponAttack(name, diceType, diceNumber, baseStat, description){
 //submit for weaponattacks
 var form = document.querySelectorAll('form')[0];
 form.addEventListener('submit', submitAttack);
-function submitAttack(event){
+
+function submitAttack(event) {
   event.preventDefault();
   var name = document.querySelectorAll('input[name="name"]')[0];
   var diceType = document.querySelectorAll('select[name="diceType"]')[0];
   var diceNumber = document.querySelectorAll('select[name="diceNumber"]')[0];
   var baseStat = document.querySelectorAll('select[name="baseStat"]')[0];
-  var description =  document.querySelectorAll('input[name="description"]')[0];
+  var description = document.querySelectorAll('input[name="description"]')[0];
 
-  var weaponAttack = new WeaponAttack( name.value, diceType.value, diceNumber.value, baseStat.value, description.value);
+  var weaponAttack = new WeaponAttack(name.value, diceType.value, diceNumber.value, baseStat.value, description.value);
   weaponAttack.render();
 
   characters[selectedCharacter].attacks.push(weaponAttack);
@@ -79,7 +80,7 @@ function submitAttack(event){
   localStorage.setItem('characters', JSON.stringify(characters));;
 };
 //spell attacks!
-function SpellAttack(name, diceType, diceNumber, baseStat, spellLevel, description){
+function SpellAttack(name, diceType, diceNumber, baseStat, spellLevel, description) {
   this.name = name;
   this.diceType = diceType;
   this.diceNumber = diceNumber;
@@ -90,16 +91,17 @@ function SpellAttack(name, diceType, diceNumber, baseStat, spellLevel, descripti
 //submit for spellattacks
 var form = document.querySelectorAll('form')[1];
 form.addEventListener('submit', submitSpell);
-function submitSpell(event){
+
+function submitSpell(event) {
   event.preventDefault();
   var name = document.querySelectorAll('input[name="name"]')[1];
   var diceType = document.querySelectorAll('select[name="diceType"]')[1];
   var diceNumber = document.querySelectorAll('select[name="diceNumber"]')[1];
   var baseStat = document.querySelectorAll('select[name="baseStat"]')[1];
   var spellLevel = document.querySelectorAll('select[name="spellLevel"]')[0];
-  var description =  document.querySelectorAll('input[name="description"]')[1];
+  var description = document.querySelectorAll('input[name="description"]')[1];
 
-  var spellAttack = new SpellAttack( name.value, diceType.value, diceNumber.value, baseStat.value, spellLevel.value, description.value);
+  var spellAttack = new SpellAttack(name.value, diceType.value, diceNumber.value, baseStat.value, spellLevel.value, description.value);
   spellAttack.render();
 
   characters[selectedCharacter].attacks.push(spellAttack);

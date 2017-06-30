@@ -13,7 +13,7 @@ function attackOnLoad() {
 }
 function buildOnLoad(){
   load();
-}
+  }
 function load() {
   if (localStorage.getItem('characters') != null){
     characters = JSON.parse(localStorage.getItem('characters'));
