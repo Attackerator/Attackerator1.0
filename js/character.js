@@ -16,7 +16,7 @@ function Character(name, health) {
 //method for generating stats | roll 4 D6 then take out the lowest number and add the rest together
 Character.prototype.generateStat = function() {
   var rolls = [];
-  for(var i = 0; i < 4; i++){
+  for (var i = 0; i < 4; i++) {
     //while using math.floor the and math.random * 7 the highest value is 6
     var randomNumber = Math.floor(Math.random() * 7);
     rolls.push(randomNumber);
@@ -25,10 +25,10 @@ Character.prototype.generateStat = function() {
   //sorts array lowest to highest
   rolls.sort();
   //pulls up the first index, the lowest number
-  rolls.splice(0,1);
+  rolls.splice(0, 1);
   var stat = 0;
   //loops through and adds up the array
-  for(var i = 0; i < rolls.length; i++){
+  for (var i = 0; i < rolls.length; i++) {
     var index = rolls[i];
     stat += index;
   }
@@ -38,7 +38,8 @@ Character.prototype.generateStat = function() {
 //grab name in form and update charachter name
 var form = document.querySelector('form');
 form.addEventListener('submit', updateStats);
-function updateStats(event){
+
+function updateStats(event) {
   event.preventDefault();
   var name = document.querySelector('input[name = "name"]');
   var character = new Character(name.value);
@@ -52,7 +53,8 @@ function updateStats(event){
   renderCharacterList();
   attackForm();
 };
-function renderCharacter(character){
+
+function renderCharacter(character) {
   var charName = document.getElementById('displayName');
   charName.textContent = character.name;
 
@@ -96,17 +98,17 @@ function renderCharacterList() {
   var characterList = document.getElementById('characters');
   while (characterList.firstChild) {
     characterList.removeChild(characterList.firstChild);
-    }
-  for(var i = 0; i < characters.length; i++) {
-  var characterOption = characters[i];
-  var el = document.createElement('option');
-  el.textContent = characterOption.name;
-  el.value = i;
-  characterList.appendChild(el);
-};
+  }
+  for (var i = 0; i < characters.length; i++) {
+    var characterOption = characters[i];
+    var el = document.createElement('option');
+    el.textContent = characterOption.name;
+    el.value = i;
+    characterList.appendChild(el);
+  };
 }
 
-function updateSelectedCharacter(){
+function updateSelectedCharacter() {
   var characterList = document.getElementById('characters');
   selectedCharacter = characterList.value;
   localStorage.setItem('selectedCharacter', JSON.stringify(selectedCharacter));;
