@@ -18,12 +18,12 @@ input[type='submit']{
 #weaponTable{
   width:100%;
   margin: auto;
-  background-color: #F22B29;
+  background-color: #FFF;
 }
 #spellTable{
   width:100%;
-  margin: auto;
-  background-color: purple;
+  margin: 25px auto;
+  background-color: #FFF;
 }
 table td{
   text-align: center;
