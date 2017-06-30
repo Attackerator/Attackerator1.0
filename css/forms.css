@@ -1,8 +1,8 @@
 fieldset{
-  font-family: 'Permanent Marker', cursive;
+  font-family:'Sigmar One', cursive;
+  border: 5px solid black;
   clear: both;
   font-size: 30px;
-  background-color: rgba(205,170,125,0.5);
 }
 input{
   font-size: 20px;
