@@ -79,7 +79,7 @@
   border-radius: 50%;
 }
 body{
-  margin: 10px auto;
+  margin: 0px;
   background-image: url(images/mapbackground.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -115,6 +115,9 @@ nav a{
       -1px 1px 0 rgba(255, 255, 255, 0.5),
        1px 1px 0 rgba(255, 255, 255, 0.5);
   color: black;
+}
+.healthDisplay {
+  margin: 0px;
 }
 footer{
   background-color: rgba(1, 151, 246, .5);
